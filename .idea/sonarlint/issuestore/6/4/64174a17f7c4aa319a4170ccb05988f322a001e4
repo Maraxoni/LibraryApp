@@ -1,29 +1,31 @@
 
 J
-java:S16045"(Make this anonymous inner class a lambda(ÇÎáæşÿÿÿÿ8ÕÄ¯àÈ1
+java:S16046"(Make this anonymous inner class a lambda(ÇÎáæşÿÿÿÿ8°™°ëÈ1
 J
-java:S1604="(Make this anonymous inner class a lambda(“«ì×ıÿÿÿÿ8ÕÄ¯àÈ1
+java:S1604>"(Make this anonymous inner class a lambda(“«ì×ıÿÿÿÿ8°™°ëÈ1
 W
-java:S18744":Remove this use of "ViewModelProviders"; it is deprecated.(Ÿ€Ò8ÄÆ¯àÈ1
+java:S18745":Remove this use of "ViewModelProviders"; it is deprecated.(Ÿ€Ò8ì™°ëÈ1
 G
-java:S18744"*Remove this use of "of"; it is deprecated.(Ÿ€Ò8ÆÆ¯àÈ1
+java:S18745"*Remove this use of "of"; it is deprecated.(Ÿ€Ò8ì™°ëÈ1
 `
-java:S1874A">Remove this use of "startActivityForResult"; it is deprecated.(ëÖƒ øÿÿÿÿ8ÓÆ¯àÈ1
+java:S1874B">Remove this use of "startActivityForResult"; it is deprecated.(ëÖƒ øÿÿÿÿ8ñ™°ëÈ1
 f
-java:S1874]"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¹Î¾8ÚÆ¯àÈ1
+java:S1874^"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¹Î¾8ó™°ëÈ1
 ‰
-java:S3252g"gUse static access with "com.google.android.material.snackbar.BaseTransientBottomBar" for "LENGTH_LONG".(Œ¦ˆüÿÿÿÿ8áÆ¯àÈ1
+java:S3252h"gUse static access with "com.google.android.material.snackbar.BaseTransientBottomBar" for "LENGTH_LONG".(Œ¦ˆüÿÿÿÿ8õ™°ëÈ1
 ‰
-java:S3252q"gUse static access with "com.google.android.material.snackbar.BaseTransientBottomBar" for "LENGTH_LONG".(Œ¦ˆüÿÿÿÿ8ãÆ¯àÈ1
+java:S3252r"gUse static access with "com.google.android.material.snackbar.BaseTransientBottomBar" for "LENGTH_LONG".(Œ¦ˆüÿÿÿÿ8õ™°ëÈ1
 ‰
-java:S3252x"gUse static access with "com.google.android.material.snackbar.BaseTransientBottomBar" for "LENGTH_LONG".(Œ¦ˆüÿÿÿÿ8äÆ¯àÈ1
+java:S3252y"gUse static access with "com.google.android.material.snackbar.BaseTransientBottomBar" for "LENGTH_LONG".(Œ¦ˆüÿÿÿÿ8ö™°ëÈ1
 \
-java:S1874–">Remove this use of "startActivityForResult"; it is deprecated.(Ìêò‹8ïÆ¯àÈ1
+java:S1874›">Remove this use of "startActivityForResult"; it is deprecated.(Ìêò‹8ÅºëÈ1
+‹
+java:S3252Î"hUse static access with "com.google.android.material.snackbar.BaseTransientBottomBar" for "LENGTH_SHORT".(­ªÜşÿÿÿÿ8ŸÅºëÈ1
 @
-java:S1128"Remove this duplicated import.(°şÊóøÿÿÿÿ8øÆ¯àÈ1
+java:S1128"Remove this duplicated import.(°şÊóøÿÿÿÿ8ÿ™°ëÈ1
 @
-java:S1128"Remove this duplicated import.(Ø½­äşÿÿÿÿ8úÆ¯àÈ1
+java:S1128"Remove this duplicated import.(Ø½­äşÿÿÿÿ8€š°ëÈ1
 ;
-java:S1128"Remove this duplicated import.(€¶£î8úÆ¯àÈ1
+java:S1128"Remove this duplicated import.(€¶£î8€š°ëÈ1
 ;
-java:S1128 "Remove this duplicated import.(ë„ƒŠ8úÆ¯àÈ1
+java:S1128!"Remove this duplicated import.(ë„ƒŠ8€š°ëÈ1

@@ -35,13 +35,13 @@ public abstract class BookDatabase extends RoomDatabase {
                 BookDao dao = INSTANCE.bookDao();
                 dao.deleteAll();
 
-                Book book = new Book("The Lord of the Rings", "J. R. R. Tolkien");
-                dao.insert(book);
-                book = new Book("Pan Tadeusz", "Adam Mickiewicz");
+                Book book = new Book("Pieśń lodu i ognia", "George R. R. Martin");
                 dao.insert(book);
                 book = new Book("Lalka", "Bolesław Prus");
                 dao.insert(book);
-                book = new Book("Krzyżacy", "Henryk Sienkiewicz");
+                book = new Book("Ogniem i Mieczem", "Henryk Sienkiewicz");
+                dao.insert(book);
+                book = new Book("Kordian", "Adam Mickiewicz");
                 dao.insert(book);
             });
         }

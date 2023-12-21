@@ -6,6 +6,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.view.MotionEvent;
 import android.view.View;
 
 
@@ -121,15 +122,19 @@ public class MainActivity extends AppCompatActivity {
                     .show();
     }
 
-    private class BookHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
+    private class BookHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener, View.OnTouchListener {
+        private static final int SWIPE_THRESHOLD = 100;
+        private static final long CLICK_HOLD_THRESHOLD = 100; // Adjust the value as needed
+
         private TextView bookTitleTextView;
         private TextView bookAuthorTextView;
         private Book book;
+        private float startX;
+        private long clickStartTime;
 
         public BookHolder(LayoutInflater inflater, ViewGroup parent) {
             super(inflater.inflate(R.layout.book_list_item, parent, false));
-            itemView.setOnClickListener(this);
-            itemView.setOnLongClickListener(this);
+            itemView.setOnTouchListener(this);
 
             bookTitleTextView = itemView.findViewById(R.id.book_title);
             bookAuthorTextView = itemView.findViewById(R.id.book_author);
@@ -155,7 +160,54 @@ public class MainActivity extends AppCompatActivity {
             MainActivity.this.bookViewModel.delete(this.book);
             return true;
         }
+
+        @Override
+        public boolean onTouch(View v, MotionEvent event) {
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    startX = event.getX();
+                    // Record the start time when the button is pressed
+                    clickStartTime = System.currentTimeMillis();
+                    return true;
+
+                case MotionEvent.ACTION_UP:
+                    float endX = event.getX();
+                    float deltaX = endX - startX;
+
+                    // Calculate the click duration
+                    long clickDuration = System.currentTimeMillis() - clickStartTime;
+
+                    if (Math.abs(deltaX) > SWIPE_THRESHOLD) {
+                        // Swipe detected
+                        if (deltaX > 0) {
+                            showSnackbar("Zarchiwizowano Książkę (Swipe Right)");
+                        } else {
+                            showSnackbar("Zarchiwizowano Książkę (Swipe Left)");
+                        }
+                    } else {
+                        // No swipe, handle click and long click based on the duration
+                        if (clickDuration < CLICK_HOLD_THRESHOLD) {
+                            // Handle regular click
+                            onClick(v);
+                        } else {
+                            // Handle long click
+                            onLongClick(v);
+                        }
+                    }
+                    return true;
+
+                default:
+                    return false;
+            }
+        }
+
+        // Helper method to show a Snackbar
+        private void showSnackbar(String message) {
+            Snackbar snackbar = Snackbar.make(itemView, message, Snackbar.LENGTH_SHORT);
+            snackbar.show();
+        }
     }
+
 
     private class BookAdapter extends RecyclerView.Adapter<BookHolder> {
         private List<Book> books;

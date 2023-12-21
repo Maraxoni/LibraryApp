@@ -37,4 +37,10 @@ public class BookRepository {
             bookDao.delete(book);
         });
     }
+
+    void archivize(Book book) {
+        BookDatabase.databaseWriteExecutor.execute(() -> {
+
+        });
+    }
 }

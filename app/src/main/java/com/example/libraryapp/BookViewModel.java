@@ -6,11 +6,14 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import java.util.List;
 
 public class BookViewModel extends AndroidViewModel {
     private BookRepository bookRepository;
     private LiveData<List<Book>> books;
+
 
     public BookViewModel(@NonNull Application application) {
         super(application);
@@ -32,5 +35,9 @@ public class BookViewModel extends AndroidViewModel {
 
     public void delete(Book book) {
         bookRepository.delete(book);
+    }
+
+    public void archivize(Book book) {
+        bookRepository.archivize(book);
     }
 }
