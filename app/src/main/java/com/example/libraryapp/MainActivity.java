@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
 
     private class BookHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener, View.OnTouchListener {
         private static final int SWIPE_THRESHOLD = 100;
-        private static final long CLICK_HOLD_THRESHOLD = 100; // Adjust the value as needed
+        private static final long CLICK_HOLD_THRESHOLD = 500; // Adjust the value as needed
 
         private TextView bookTitleTextView;
         private TextView bookAuthorTextView;
